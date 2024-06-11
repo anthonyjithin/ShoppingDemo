@@ -30,7 +30,7 @@ public class LoginWrongPass extends Hooks{
 		ShoppingLoginPage login = new ShoppingLoginPage();
 		
 		try {
-			Assert.assertEquals(login.getLoginAccText().getText(), "Login to your account");
+			Assert.assertEquals(login.getLoginAccText().getText(), "Login to my account");
 		}
 		catch (AssertionError e) {
 			Assert.fail("Login failed");
@@ -42,7 +42,7 @@ public class LoginWrongPass extends Hooks{
 		login.getLoginBtn().click();
 		ExtentManager.pass("Login button clicked");
 		try {
-			Assert.assertEquals(login.getLoginIncorrect().getText(), "Your email or password is incorrect!");
+			Assert.assertEquals(login.getLoginIncorrect().getText(), "Your email or password is in-correct!");
 		}catch (AssertionError e) {
 			Assert.fail("Login Failed");
 		}
